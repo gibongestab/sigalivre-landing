@@ -4,7 +4,7 @@
 
     "exposeMixins": true,
 
-    "compile": true,
+    "compile": false,
 
     "modules": {
        "alerts": true,
