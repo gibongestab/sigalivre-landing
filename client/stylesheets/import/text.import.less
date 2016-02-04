@@ -1,0 +1,55 @@
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    line-height: 120%;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    &:after {
+        display: block;
+        height: 2px;
+        background-color: @primary-color;
+        content: " ";
+        width: 100px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+}
+
+p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+.p-list {
+    font-size: 110%;
+    padding-top: 10px;
+}
