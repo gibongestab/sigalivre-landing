@@ -50,21 +50,49 @@ section {padding: 60px, 0;}
 
 @media only screen and (max-width: 768px) {
 
-.nav {
-	margin-top: 0;
+
+/* --- Navbar for mobile --- */
+
+
+.navbar, .navbar-default {
+ background-color: transparent;
+ height: auto;
+ padding-bottom: 8px;
 }
 
-.navbar-list > li {
+.navbar-list {
+ margin-top: 6.5%;
+}
+
+.navbar-list > li > a:link,
+.navbar-list > li > a:visited, {
 	border-bottom: 0;
 	border-top: 0;
 	transition: none;
 }
 
-.navbar-list > li:hover,
-.navbar-list > li:active, {
+.navbar-list > li > a:hover,
+.navbar-list > li > a:active, {
 		border-bottom: 0;
 		border-top: 0;
 }
+
+/* --- Sticky-Navbar for mobile --- */
+
+.sticky {
+	background-color: rgba(255, 255, 255, 0.98);
+}
+
+.sticky .navbar-toggle {
+	margin-top: 3%;
+}
+
+.sticky .navbar-toggle {
+	background-color: @primary-color;
+}
+
+
+/* --- Portfolio --- */
 
 .showcase > li {
 	display: inline-block;
@@ -85,6 +113,8 @@ section {padding: 60px, 0;}
 	top: 45%;
 }
 
+/* --- How It Works --- */
+
 .steps-box:first-child {
     text-align: center;
 }
@@ -104,6 +134,15 @@ h1 {
 	width: 90%;
 	margin: auto;
 }
+
+.navbar-toggle {
+	margin-top: 10%;
+}
+
+.sticky .navbar-toggle {
+	margin-top: 4%;
+}
+
 
 }
 

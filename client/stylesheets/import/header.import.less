@@ -31,12 +31,19 @@ header {
 	width: auto;
 	vertical-align: middle
 }
+
+.logo-black {
+	display: none !important;
+	height: 50px;
+	width: auto;
+	margin-left: 15px;
+}
  
 .nav {
 	margin-top: 37px;
 }
 
-.navbar-list > li {
+.navbar-list > li > a {
 	text-transform: uppercase;
 	font-size: 90%;
 	margin-right: 5px;
@@ -46,16 +53,49 @@ header {
 }
 
 
-.navbar-list > li:hover,
-.navbar-list > li:active, {
+.navbar-list > li > a:hover,
+.navbar-list > li > a:active, {
 		border-bottom: 1px solid @primary-color;
 		border-top: 1px solid @primary-color;
 }
 
 
-/*----- NAVBAR for MOBILE ------- */
+/*----- MOBILE NAVBAR ------- */
 
 .navbar-toggle {
-	margin-top: 6%;
+	margin-top: 6.5%;
+}
+
+
+/*----- STICKY NAVBAR ------- */
+
+.sticky {
+	position: fixed;
+	height: 70px;
+	line-height: 70px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.98);
+	box-shadow: 0 2px 2px #D2D2D2;
+	z-index: 9999;
+}
+
+.sticky .navbar-list {
+		margin-top: 5px;
+}
+
+.sticky .navbar-list > li > a:link,
+.sticky .navbar-list > li > a:visited, {
+	color: #555;
+}
+
+
+
+.sticky .logo-black {display: block !important;}
+.sticky .logo {display: none;}
+
+.sticky .nav {
+	margin-top: 8px;
 }
 
