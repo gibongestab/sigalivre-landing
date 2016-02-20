@@ -1,61 +1,147 @@
 
+/*-------------------------------- BREAKPOINT 1 (LG) ------------------------------*/
 
-/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1675px) {
+	.cargos-box {
+		padding-left: 1%;
+	}
+	.container-cargos {
+		width: 90%;
+	}
+}
+
+
+
+
+/*-------------------------------- BREAKPOINT 2 (MD) ------------------------------*/
+
 
 @media only screen and (max-width : 1200px) {
-	.hero-text-box {
-		width: 100%;
-		padding: 0 3%;
+	.banner-row {
+		width: 80%;
+		margin-left: 10%;
 	}
 
-	.steps-box:last-child {
-		margin-top: 100px;
+	/*--SECTION SOBRE--*/
+
+	.box-planeje {
+		padding-left: 4%;
+		h4 {
+		margin-bottom: 5%;
+		}
+	}
+	
+	.box-objetivos {
+		margin-top: 1%;
+		padding-right: 1%;
+
+		p {
+			font-size: 90%;
+		}
+	}
+
+	/*--SECTION CRITERIOS--*/
+
+	.steps-box:first-child {
+		margin-top: 50px;
+	}
+
+	.grid-square {
+		width: 315px;
+	}
+
+  /*--SECTION VIDEO--*/
+
+	.video-text {
+		margin-top: 50px;
 	}
 
 }
 
 
-/* Medium Devices, Desktops */
+
+/*-------------------------------- BREAKPOINT 3 (SM) ------------------------------*/
 
 @media only screen and (max-width: 992px) {
 
-.container {
-	width: 100%;
+
+	section {padding: 60px 0;}
+
+
+	/*--SECTION SOBRE--*/
+
+	.row-about {
+		text-align: center;
+	}
+
+	.box-planeje {
+		margin-top: 0.5%;
+	}
+
+	.box-objetivos {
+		margin-top: 4.5%;
+	}
+	
+	/*--SECTION CRITERIOS--*/
+
+	.steps-box:first-child {
+		margin-top: 30px;
+	}
+
+	.works-step p {
+		padding-top: 10px;
+
+	}
+
+	.step-two {
+		margin-bottom: 30px;
+	}
+
+	.grid-square {
+		width: 371px;
+		padding: 5%;
+	}
+
+	.box-3 {
+		p {
+			padding: 5%;
+		}
+		i {
+			margin-top: 130px;
+		}
+	}
+	
+	/*--SECTION VIDEO--*/
+
+
+	.row-video {
+		text-align: center;
+	}
+
+	.video-design {
+	width: 650px;
+	height: 457px;
 }
 
-.my-body {font-size: 18px;}
+	/*--SECTION CARGOS--*/
 
-section {padding: 60px, 0;}
-
-.long-copy {
-	width: 80%;
-	margin-left: 10%
-}
-
-.section-works {
-	padding-top: 60px;
-	padding-bottom: 100px;
-}
-
-
-.form-horizontal {
-	width: 80%;
-	margin: auto;
-}
+	.senioridades-box{
+		margin-top: 20px;
+	}
 
 }
 
 
- /* Small Devices, Tablets */
+
+/*-------------------------------- BREAKPOINT 4 (XS) ------------------------------*/
 
 @media only screen and (max-width: 768px) {
 
 
-/* --- Navbar for mobile --- */
+/* --- NAVBAR FOR MOBILE --- */
 
 
 .navbar, .navbar-default {
- background-color: transparent;
  height: auto;
  padding-bottom: 8px;
 }
@@ -66,18 +152,16 @@ section {padding: 60px, 0;}
 
 .navbar-list > li > a:link,
 .navbar-list > li > a:visited, {
-	border-bottom: 0;
-	border-top: 0;
+	border: 0;
 	transition: none;
 }
 
 .navbar-list > li > a:hover,
 .navbar-list > li > a:active, {
-		border-bottom: 0;
-		border-top: 0;
+		border: 0;
 }
 
-/* --- Sticky-Navbar for mobile --- */
+/* --- STICKY NAVBAR FOR MOBILE --- */
 
 .sticky {
 	background-color: rgba(255, 255, 255, 0.98);
@@ -87,60 +171,134 @@ section {padding: 60px, 0;}
 	margin-top: 3%;
 }
 
-.sticky .navbar-toggle {
-	background-color: @primary-color;
+/* --- CRITERIOS --- */
+
+ .works-step div {
+		margin-right: 15px;
+	}
+
+.step-one {
+	margin-bottom: 55px;
+}
+
+ .icons-box {
+ 	text-align: center;
+}
+
+.grid-square {
+    padding: 4%;
+}
+
+.box-1 {
+	margin-bottom: 6px;
+	i {
+    margin-top: 30px;
+  }
+ } 
+
+.box-3 {
+    height: 400px;
+    margin-top: 0;
+    i {
+    	margin-top: 30px;
+    }
+}
+
+.icons-box:last-child {
+	padding-top: 0px;
+}
+
+/* --- VIDEO --- */
+
+.video-design {
+	width: 500px;
+	height: 350px;
+}
+
+.video-text {
+	padding: 0 4%;
 }
 
 
-/* --- Portfolio --- */
+	/*--SECTION CARGOS--*/
 
-.showcase > li {
-	display: inline-block;
-	float: none;
-	width: 47%;
-	border: 5px double #E5E5E5
+.cargos-pills > li > a {
+	padding: 35px 45px;
+	margin-right: 10px;
+	background-color: rgba(159, 159, 159, 0.2);
+	border-radius: 0;
 }
 
-.showcase {
-	text-align: center;
-}
-
-.portfolio-photo h5 {
-	word-spacing: 3px;
-	font-size: 110%;
-	padding: 18%;
-	width: 75%;
-	top: 45%;
-}
-
-/* --- How It Works --- */
-
-.steps-box:first-child {
-    text-align: center;
-}
+	.senioridades-box{
+		margin-top: 10px;
+	}
 
 }
 
-/* Extra Small Devices, Phones */ 
+
+/*-------------------------------- BREAKPOINT 4  ------------------------------*/
 
 @media only screen and (max-width: 480px) {
+
+section {padding: 40px 0;}
 
 h1 {
 	font-size: 200%;
 	word-spacing: 2px;
 }
 
-.form-horizontal {
+	/*--SECTION ABOUT--*/ 
+
+	.box-objetivos {
+		padding: 8px 20px;
+	}
+
+	/*--SECTION CRITERIOS--*/ 
+
+	.steps-box:first-child {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+
+	.works-step div {
+		margin-right: 20px;
+	}
+
+	.works-step p {
+		font-size: 85%;
+	}
+
+/* --- SECTION VIDEO --- */
+
+.video-design {
+	width: 380px;
+	height: 290px;
+}
+
+.video-text {
+	padding: 0 4%;
+}
+
+	/*--SECTION CARGOS--*/
+
+.cargos-pills > li > a {
+	padding: 3px 9px;
+	margin-right: 5px;
+	background-color: rgba(159, 159, 159, 0.2);
+	border-radius: 0;
+}
+
+.cargos-pills > li > a > img {
+	height: auto;
 	width: 90%;
-	margin: auto;
 }
 
-.navbar-toggle {
-	margin-top: 10%;
-}
+.senioridades-box{
+		margin-top: 0px;
+	}
 
-.sticky .navbar-toggle {
-	margin-top: 4%;
+.retangle-senioridades:first-child {
+    margin-bottom: 70px;
 }
 
 

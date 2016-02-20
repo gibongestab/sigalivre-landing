@@ -1,0 +1,124 @@
+.section-cargos {
+	background-image: url("/images/pattern-2.png");
+  background-attachment: fixed;
+  background-repeat: repeat;
+}
+
+.container-cargos {
+	width: 80%;
+}
+
+.cargos-box {
+	text-align: center;
+	height: 500px;
+	padding-left: 5%;
+}
+
+
+.ul-cargos {
+	list-style: none;
+	font-size: 90%;
+}
+
+.cargos-pills > li > a {
+	padding: 40px 60px;
+	margin-right: 10px;
+	background-color: rgba(159, 159, 159, 0.2);
+	border-radius: 0;
+}
+
+
+.cargos-pills > li > a:hover {
+	background-color: #fff;
+}
+
+
+.tab-content div {
+	margin-top: 30px;
+	text-align: left;
+}
+
+.nav-pills > li.active > a {
+	background-color: #fff !important;
+	position: relative;
+
+}
+
+.nav-pills > li.active > a:after {
+	content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -16px;
+    border-width: 12px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+.lista-cargos {
+	font-size: 80%;
+	list-style: none;
+	padding-left: 20px;
+}
+
+.lista-cargos li {
+	line-height: 160%;
+}
+
+.lista-cargos li:before {
+	font-size: 90%;
+	color: #6A9F01;
+	padding-left: 2px;
+	padding-right: 10px;
+	content: "\f10c";
+  font-family: 'fontawesome';
+}
+
+
+/*------- SENIORIDADES --------- */
+
+
+.senioridades-box {
+	margin-top: 50px;
+}
+
+.retangle-senioridades {
+	margin-top: 40px; 
+	height: 60px;
+	line-height: 60px;
+}
+
+.retangle-senioridades div {
+	color: @primary-color;
+	border: 3px solid @primary-color;
+	display: inline-block;
+	border-radius: 50%;
+	width: 65px;
+	height: 65px;
+	line-height: 55px;
+	text-align: center;
+	padding: 3px;
+	float: left;
+	font-size: 120%;
+	margin-right: 25px;
+}
+
+
+.retangle-senioridades p {
+	padding-top: 6px;
+	text-align: left;
+	line-height: 160%;
+	font-size: 90%;
+	vertical-align: middle;
+}
+
+.retangle-senioridades:first-child {
+	margin-bottom: 55px;
+
+	div {
+		margin-top: 10px;
+	}
+   p {
+	 padding-top: 0px;
+   }
+}

@@ -1,33 +1,31 @@
 <template name="header">
-	<header id="home">
-		<nav class="navbar navbar-default">
-		<div>
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    		<div class="navbar-header navbar-brand navbar-left">
-					<img src="/images/logo-white.png" alt="logo" class="logo">
-					<img src="/images/logo.png" alt="logo" class="logo-black">
-				</div>
-			<div class="container-fluid navbar-container collapse navbar-collapse" id="my-navbar">
-				<div>
-					<ul class="nav navbar-nav navbar-right navbar-list">
-						<li><a href="#home">Home</a></li>
-						<li><a href="#about">About Me</a></li>
-						<li><a href="#portfolio">Portfolio</a></li>
-						<li><a href="#form">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<div class="hero-text-box">
-			<h1>The best website ever.<br> This is the base project master.</h1>
-			<button class="btn btn-primary js-scroll-full">More action</button>
-			<button class="btn btn-default js-scroll-ghost">Less action</button>
-		</div>
-	</header>
+    <header>
+        <div class="container-fluid top-bar">
+           <a class="portal-link" href="#"><img src="/images/portal-ligado.png" alt="Portal Ligado" class="portal"></a>
+            <a href="#sign" class="btn btn-default btn-lg sign-button">Sign In</a>
+        </div>
+        <div class="hero-box">
+            <img src="/images/logo.png" alt="Siga Livre" class="big-logo">
+        </div>
+        <nav class="navbar navbar-default">
+            <div>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="container-fluid navbar-container collapse navbar-collapse" id="my-navbar">
+                <div class="nav-center">
+                    <ul class="nav navbar-nav navbar-list">
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#criterios">Critérios</a></li>
+                        <li><a href="#cargos">Estrutura de Cargos</a></li>
+                        <li><a href="#carreiras">Mapa de Carreiras</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 </template>
