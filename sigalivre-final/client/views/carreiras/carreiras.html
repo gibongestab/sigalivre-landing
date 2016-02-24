@@ -1,0 +1,59 @@
+<template name="carreiras">
+  <div class="container">
+    <section class="form js-section-container" id="mapa">
+      <form class="form-horizontal">
+        <fieldset>
+          <!-- Form Name -->
+          <h2>We're happy to hear from you</h2>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-lg-5 col-md-5 control-label" for="form-name">Name</label>
+            <div class="col-lg-4 col-md-4">
+              <input id="form-name" name="form-name" type="text" placeholder="your name" class="form-control input-md" required="">
+            </div>
+          </div>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-lg-5 col-md-5 control-label" for="form-email">Email</label>
+            <div class="col-lg-4 col-md-4">
+              <input id="form-email" name="form-email" type="text" placeholder="your email" class="form-control input-md" required="">
+            </div>
+          </div>
+          <!-- Select Basic -->
+          <div class="form-group">
+            <label class="col-lg-5 col-md-5 control-label" for="form-how">How did you find us?</label>
+            <div class="col-lg-4 col-md-4">
+              <select id="form-how" name="form-how" class="form-control">
+                <option value="1">Friends</option>
+                <option value="2">Google</option>
+                <option value="3">Facebook</option>
+                <option value="4">Add</option>
+              </select>
+            </div>
+          </div>
+          <!--Checkboxe-->
+          <div class="form-group">
+            <label class="col-lg-5 col-md-5 control-label" for="form-news">Newsletter?</label>
+            <div class="col-lg-4 col-md-4" style="margin-top: 7px">
+              <input type="checkbox" name="form-news" id="form-news" checked=""> Yes, please!
+            </div>
+          </div>
+          <!-- Textarea -->
+          <div class="form-group">
+            <label class="col-lg-5 col-md-5 control-label" for="form-text">Drop us a line</label>
+            <div class="col-lg-4 col-md-4 textarea-form">
+              <textarea class="form-control" id="form-text" name="form-text" placeholder="your message"></textarea>
+            </div>
+          </div>
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-lg-5 col-md-5 control-label" for="form-send"></label>
+            <div class="col-lg-4 col-md-4">
+              <button id="form-send" name="form-send" class="btn btn-primary">Send It</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </div>
+</template>
