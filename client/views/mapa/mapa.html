@@ -1,0 +1,13 @@
+<template name="mapa">
+  <section class="section-mapa" id="mapa">
+    <div class="wrapper">
+    {{#if Template.subscriptionsReady}}
+      <div class="diagrama">
+      {{> diagrama}}
+      </div>
+    {{else}}
+      {{> spinner}}
+    {{/if}}
+    </div>
+  </section>
+</template>

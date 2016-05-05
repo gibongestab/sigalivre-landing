@@ -1,0 +1,30 @@
+<template name="modal">
+  <div class="modal inmodal">
+    <div class="modal-dialog {{#if large}}modal-lg{{/if}}">
+      <div class="modal-content animated fadeIn">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          {{#if icone}}
+            <i class="{{icone}} modal-icon"></i>
+          {{/if}}
+          {{#if avatar}}
+            <img src="{{avatar}}" style="opacity:0.75;">
+          {{/if}}
+          <h4 class="modal-title">{{{titulo}}}</h4>
+          <small>{{{subtitulo}}}</small>
+        </div>
+        {{>UI.contentBlock}}
+      </div>
+    </div>
+  </div>
+</template>
+<template name="modalBody">
+  <div class="modal-body">
+    {{>UI.contentBlock}}
+  </div>
+</template>
+<template name="modalFooter">
+  <div class="modal-footer">
+    {{>UI.contentBlock}}
+  </div>
+</template>

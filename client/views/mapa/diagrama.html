@@ -1,0 +1,130 @@
+<template name="buscaAreas">
+  <input class="typeahead busca-area" name="team" type="text" placeholder="Buscar áreas" autocomplete="off" spellcheck="off" data-highlight="true" data-hint="true" data-value-key="nome" data-autoselect="true" data-source="areas" data-select="selected" />
+</template>
+
+<template name="diagrama">
+    
+      <div class="row">
+        <div class="col-sm-8" style="padding:20px">
+          <h3> 
+        <a href="{{pathFor 'mapa'}}">AES Brasil</a>
+        {{#with areaRaiz}}
+            {{#if _id}}
+                {{#each $mapped caminho}}
+                    {{#with area this}}
+                     > <a href="{{pathFor 'mapa' query=($concat 'raiz=' _id)}}">{{nome}}</a>
+                    {{/with}}
+                {{/each}}
+
+                
+                > {{nome}}
+            {{/if}}
+        {{/with}}
+         </h3>
+        </div>
+        <div class="col-sm-4" align="right" style="padding:20px">
+          {{> buscaAreas}}
+        </div>
+      </div>
+      {{#if listaHorizontal}}
+        <table class="table table-striped diagrama-list">
+          {{#with areaRaiz}}
+            <thead>
+              <tr>
+                <th>
+                  <img src='/img/areas/16/{{areaImg}}'>
+                </th>
+                <th>
+                  <h2>{{nome}}</h2>
+                </th>
+                <th>
+                  {{#if _id}}
+                    <button class="btn btn-large btn-primary btn-voltar"><i class="fa fa-level-up"></i></button>
+                  {{/if}}
+                </th>
+              </tr>
+            </thead>
+          {{/with}}
+          <tbody>
+            {{#each filhosDiretos}}
+              <tr class="animated fadeIn">
+                <td><img src='/img/areas/16/{{areaImg}}'></td>
+                <td>
+                  <h3>{{nome}}</h3></td>
+                <td>
+                  <button class="btn btn-large btn-primary conhecer">Conhecer <i class="fa fa-arrow-right"></i></button>
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      {{else}}{{> diagramaArvore}} {{/if}}
+
+</template>
+
+<template name="diagramaArvore">
+  <div class="scroll-diagrama" align="center">
+    <table class="table-striped diagrama">
+      {{#each matrizAreas}}
+        <tr class="animated fadeIn">
+          {{#each this}}
+            <td colspan="{{colspan}}" class="area">
+              {{#if areaId}}
+                <span class="hvr-fade bloco-area mudar-raiz {{classe}}">
+                    <img src='/img/areas/16/{{areaImg}}'>
+                    {{nome}} 
+
+                    {{#if botaoSubir}}
+                        <button class="btn btn-primary subir-nivel">
+                            <i class="fa fa-level-up"></i>
+                        </button>
+                    {{/if}}
+                </span>
+              {{/if}}
+            </td>
+          {{/each}}
+        </tr>
+      {{/each}}
+      <tr style="height:100px;">
+        {{#each matrizCoordenadores}}
+          <td colspan="{{colspan}}" class="cargo">
+            {{#each cargos}}
+              <div class="bloco-cargo hvr-float-shadow">
+                <p>{{texto}}</p>
+                {{#if classificacao}}
+                  <div class="bola ver-classificacao" style="background-color:{{cor}}">{{label}}</div>
+                {{else}}
+                  <div class="bola" style="background-color:{{cor}};opacity:0.1;">{{label}}</div>
+                {{/if}}
+              </div>
+            {{/each}}
+          </td>
+        {{/each}}
+      </tr>
+      {{#each matrizCargos}}
+        <tr class="animated fadeInDown">
+          {{#each this}}
+            <td class="cargo">
+              {{#if cargoId}}
+                <div class="bloco-cargo hvr-float-shadow">
+                  <p>
+                    {{#if temPai}}
+                      <div class="arrow-up"></div>
+                    {{else}}{{texto}} {{/if}}
+                  </p>
+                  {{#if classificacao}}
+                    <div class="bola ver-classificacao" style="background-color:{{cor}}">{{label}}</div>
+                  {{else}}
+                    <div class="bola" style="background-color:{{cor}};opacity:0.1;">{{label}}</div>
+                  {{/if}}
+                </div>
+              {{else}}
+                
+              {{/if}}
+            </td>
+          {{/each}}
+        </tr>
+      {{/each}}
+    </table>
+  </div>
+</template>
